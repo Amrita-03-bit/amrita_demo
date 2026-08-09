@@ -1,18 +1,24 @@
-nums = [1, 2, 3, 2, 4, 5, 1, 6, 3]
-
-freq={}
-
-for i in nums:
-    if i in freq:
-        freq[i]+=1
-
-    else:
-        freq[i]=1
 
 
-for j in freq:
-    if freq[j]>1:
-         
-         print(j)
+
+def second_largest_numb(nums):
+
+    lar=float('-inf')
+    second_lar_num=float('-inf')
+    for i in nums:
+        if i>lar:
+            second_lar_num=lar
+            lar=i
+        
+
     
-            
+        elif  i>second_lar_num and i!= lar:
+            second_lar_num=i
+        
+
+    return second_lar_num
+
+nums = [10, 5, 8, 10, 3, 8]
+
+
+print(second_largest_numb(nums))   
