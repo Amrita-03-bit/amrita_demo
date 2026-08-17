@@ -1,15 +1,4 @@
-arr = [3, 4, -1, 1]
-n=len(arr)
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-for i in range(n-1):
-    for j in range(n-1-i):
-        if arr[j]>arr[j+1]:
-            arr[j],arr[j+1]=arr[j+1],arr[j]
-
-excepted=1
-for i in range(n):
-    if arr[i]== excepted:
-        excepted+=1
-
-print(excepted)
-
+l=[i**2 for i in numbers if i%2==0 ]
+print(l)
